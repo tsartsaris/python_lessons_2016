@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #
-#  fruit.py
+#  fruits.py
 #  
 #  Copyright 2016 Greeklug Team <greeklug.gr>
 #  
@@ -22,7 +22,9 @@
 #  
 #  
 
+#Λίστα φρούτων
 l_fr = ['banana', 'axladi', 'milo', 'karpouzi', 'peponi']
+#Λίστα τιμών
 l_pr = [1.00, 1.25, 2.10, 5.00, 3.45]
 
 def friutCost(l1,l2,c): 
