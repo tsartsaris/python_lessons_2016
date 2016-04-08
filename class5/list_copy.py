@@ -70,5 +70,37 @@ prints
 
 # evaluating methods δηλαδή να δούμε τι είναι γρήγορο και τι όχι
 
-list1 = list(range(0,100000000000))
+import time
+
+list1 = list(range(0,100000000))
+time1 = time.time()
+list2 = list1[:]
+time2 = time.time()
+
+print "Time passed for slice method: %s" %(str(time2-time1))
+
+time1 = time.time()
+list2 = list(list1)
+time2 = time.time()
+
+print "Time passed for list build method: %s" %(str(time2-time1))
+
+time1 = time.time()
+list2 = copy.copy(list1)
+time2 = time.time()
+
+print "Time passed with copy method: %s" %(str(time2-time1))
+
+time1 = time.time()
+list2 = [x for x in list1]
+time2 = time.time()
+
+print "Time passed with list comprehension method: %s" %(str(time2-time1))
+
+"""
+Time passed for slice method: 1.00920581818
+Time passed for list build method: 1.62438106537
+Time passed with copy method: 1.61925697327
+Time passed with list comprehension method: 7.5519080162
+"""
 
